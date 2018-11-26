@@ -1,0 +1,24 @@
+############################## 项目启动信息配置 开始  ##############################
+server:
+  port: 7614
+  tomcat:
+    port-header: HEAD,PUT,DELETE,OPTIONS,TRACE,COPY,SEARCH,PROPFIND
+    min-spare-threads: 20
+    max-threads: 500
+  connection-timeout: 10000
+############################## 项目启动信息配置 结束  ##############################
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/view
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/drinks?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: drinks
+    password: drinks
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
